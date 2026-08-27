@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서울 날씨 브리핑</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div class="topline"><span class="status-dot"></span> LIVE WEATHER DATA</div>
+      <p class="eyebrow">SEOUL · SOUTH KOREA</p>
+      <h1>오늘의 서울,<br><span>하늘을 읽다.</span></h1>
+      <p class="subtitle">가장 최근 관측값을 바탕으로 한 간결한 날씨 브리핑</p>
+    </section>
+
+    <section class="weather-card" aria-live="polite">
+      <div class="card-heading"><div><p class="label">CURRENT CONDITIONS</p><p id="updatedAt">데이터를 불러오는 중…</p></div><span id="weatherIcon" class="weather-icon">☀️</span></div>
+      <div class="temperature-row"><strong id="temperature">--°</strong><div><p id="weatherText">날씨 정보</p><p class="muted">체감 <b id="apparent">--°</b></p></div></div>
+      <div class="metrics"><div><span>습도</span><b id="humidity">--%</b></div><div><span>강수량</span><b id="rain">-- mm</b></div><div><span>바람</span><b id="wind">-- km/h</b></div></div>
+    </section>
+
+    <section class="trend-card">
+      <div class="section-title"><div><p class="label">LAST TWO READINGS</p><h2>최근 변화</h2></div><span id="trendBadge" class="trend-badge">분석 중</span></div>
+      <div class="comparison"><div><span>이전</span><b id="previousTemp">--°</b><small id="previousTime">--</small></div><div class="arrow">→</div><div class="current"><span>현재</span><b id="currentTemp">--°</b><small id="currentTime">--</small></div></div>
+      <p id="trendMessage" class="trend-message">최근 관측값을 분석하고 있습니다.</p>
+    </section>
+    <footer><span>DATA SOURCE</span> weather.csv <span class="sep">·</span> 마지막 2개 관측값 기준</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
