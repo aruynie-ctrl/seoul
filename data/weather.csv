@@ -1,0 +1,2 @@
+time,latitude,longitude,temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,wind_speed_10m
+2026-08-27T10:00,37.5665,126.978,26.5,31.5,77,0.0,1,0.4
